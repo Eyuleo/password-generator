@@ -128,6 +128,16 @@ input[type="range"] {
 	visibility: hidden;
 }
 
+.github-repo {
+	color: var(--light-green);
+	font-size: 2rem;
+	transition: all .1s ease-in;
+}
+
+.github-repo:hover {
+	color: var(--light-gray);
+}
+
 .flex {
 	display: flex;
 	justify-content: space-between;
