@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--main-bg: hsl(250, 18%, 7%);
+	--container-bg: hsl(248, 10%, 15%);
+	--light-green: hsl(127, 100%, 82%);
+	--light-gray: hsl(250, 8%, 55%);
+	--very-light-gray: hsl(248, 20%, 92%);
+	--dark-green: hsl(193, 15%, 12%);
+	--white: hsl(248, 21%, 93%);
+	--font-stack: 'Source Code Pro', monospace;
+	;
+}
+
+body {
+	background-color: var(--main-bg);
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+	font-family: var(--font-stack);
+}
+
+input {
+	accent-color: var(--light-green);
+}
+
+.wrapper {
+	width: 90%;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.title {
+	color: var(--light-gray);
+	text-align: center;
+	margin-bottom: .5rem;
+	font-weight: 700;
+}
+
+input[type="text"] {
+	all: unset;
+	color: var(--white);
+	font-size: 1rem;
+	width: 80%;
+}
+
+.password-container {
+	background-color: var(--container-bg);
+	padding: 1rem 1.2rem;
+	position: relative;
+}
+
+.fa-copy {
+	font-size: 1.2rem;
+	color: var(--light-green);
+	cursor: pointer;
+	transition: all .1s ease-in;
+}
+
+.fa-copy:hover {
+	color: var(--white);
+}
+
+.preference {
+	background-color: var(--container-bg);
+	margin-top: 1rem;
+	padding: 1rem 1.2rem;
+}
+
+.char-length {
+	color: var(--very-light-gray);
+}
+
+.pass-length {
+	color: var(--light-green);
+}
+
+input[type="range"] {
+	width: 100%;
+	accent-color: var(--light-green);
+	margin: 1rem 0;
+}
+
+.option-checkbox {
+	display: flex;
+	align-items: center;
+	gap: .8rem;
+	margin-bottom: .6rem;
+}
+
+.option-checkbox label {
+	color: var(--white);
+}
+
+.generate {
+	font-weight: 700;
+	border: none;
+	background-color: var(--light-green);
+	color: var(--dark-green);
+	text-transform: uppercase;
+	padding: .9rem 1rem;
+	margin: 1.2rem 0;
+	text-align: center;
+	width: 100%;
+	cursor: pointer;
+	transition: all .1s ease-in;
+}
+
+.generate:hover {
+	border: 1px solid var(--light-green);
+	background-color: transparent;
+	color: var(--light-green);
+}
+
+.tooltip {
+	background-color: var(--light-green);
+	padding: .3rem .5rem;
+	border-radius: 5px;
+	position: absolute;
+	left: 85%;
+	top: -89%;
+	visibility: hidden;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

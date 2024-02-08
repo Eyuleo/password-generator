@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Random Password Generator</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<main class="wrapper">
+			<p class="title">Password Generator</p>
+			<div class="password-container flex">
+				<input
+					type="text"
+					disabled
+					placeholder="P4$5WOrD!"
+					id="generated-pass"
+				/>
+				<div class="tooltip">Copy</div>
+				<i class="fa-regular fa-copy" id="copy"></i>
+			</div>
+			<div class="preference">
+				<div class="flex">
+					<p class="char-length">Character Length</p>
+					<h2 id="pass-length" class="pass-length">0</h2>
+				</div>
+				<input
+					type="range"
+					name=""
+					id="password-length"
+					max="25"
+					value="0"
+					oninput="document.querySelector('#pass-length').innerHTML = this.value"
+				/>
+				<div class="option-checkbox">
+					<input type="checkbox" name="uppercase" id="uppercase" />
+					<label for="uppercase">Include Uppercase Letters</label>
+				</div>
+				<div class="option-checkbox">
+					<input type="checkbox" name="lowercase" id="lowercase" />
+					<label for="lowercase">Include Lowercase Letters</label>
+				</div>
+				<div class="option-checkbox">
+					<input type="checkbox" name="numbers" id="number" />
+					<label for="number">Include Numbers</label>
+				</div>
+				<div class="option-checkbox">
+					<input type="checkbox" name="symbols" id="symbols" />
+					<label for="symbols">Include Symbols</label>
+				</div>
+				<button class="generate">Generate →</button>
+			</div>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
